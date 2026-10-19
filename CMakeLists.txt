@@ -62,6 +62,15 @@ IF(BUILD_UCODE)
   )
 ENDIF()
 
+CONFIGURE_FILE(
+    uclient.pc.in
+    uclient.pc
+    @ONLY
+)
+
+INSTALL(FILES uclient.pc
+	DESTINATION lib/pkgconfig
+)
 INSTALL(FILES uclient.h uclient-utils.h
 	DESTINATION include/libubox
 )

@@ -1,0 +1,11 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: uclient
+Description: OpenWrt HTTP client library
+Requires: libubox
+Version:
+Libs: -L${libdir} -luclient
+Cflags: -I${includedir}
